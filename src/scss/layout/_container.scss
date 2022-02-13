@@ -1,0 +1,7 @@
+@use '../abstract/' as *;
+
+.container {
+	@include grid(center);
+	width: 90vw;
+	max-width: $maxWidth;
+}

@@ -1,0 +1,33 @@
+@use '../abstract/' as *;
+
+.btns {
+	@include flex(row, center, center);
+	gap: 17px;
+
+	.btn {
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 16px;
+		width: 115px;
+		padding: 8px 16px;
+		border-radius: 6px;
+		@include flex(row, center, center);
+		gap: 10px;
+		outline: none;
+		border: none;
+		transition: $transition-2;
+
+		&.btn-primary {
+			color: #374151;
+		}
+
+		&.btn-secondary {
+			color: #ffffff;
+			background-color: #5093e2;
+		}
+
+		&:hover {
+			transform: scale(0.95);
+		}
+	}
+}

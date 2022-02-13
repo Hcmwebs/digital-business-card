@@ -1,0 +1,50 @@
+@use '../abstract/' as *;
+@use './buttons' as *;
+
+.card {
+	max-width: $fixedWidth;
+	box-shadow: $shadow-2xl;
+	@include grid(center);
+	background-color: $bodyBg;
+	border-radius: $borderRadius;
+	overflow: hidden;
+
+	.card-body {
+		padding: 1rem 1.5rem;
+		color: #fff;
+		@include flex(column, center, center);
+		gap: 2rem;
+
+		.info {
+			@include grid(center);
+			gap: 2px;
+			text-align: center;
+
+			h3 {
+				font-size: 25px;
+			}
+
+			h4 {
+				font-size: 12.8px;
+				font-weight: 400;
+				color: #f3bf99;
+			}
+			p {
+				font-size: 10.24px;
+				line-height: 150%;
+				color: #f5f5f5;
+			}
+		}
+		.about {
+			h3 {
+				font-size: 16px;
+				line-height: 150%;
+			}
+
+			p {
+				font-size: 10.24px;
+				color: #dcdcdc;
+			}
+		}
+	}
+}
